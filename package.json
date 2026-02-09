@@ -1,0 +1,30 @@
+{
+  "name": "backend_bun",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "devDependencies": {
+    "@types/bun": "^1.3.8",
+    "better-sqlite3": "^12.6.2",
+    "drizzle-kit": "^0.31.8"
+  },
+  "scripts": {
+    "hono": "bun run index.ts",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "drizzle-kit migrate",
+    "db:seed": "bun db/seed.ts"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "@hono/zod-openapi": "^1.2.1",
+    "@hono/zod-validator": "^0.7.6",
+    "@scalar/hono-api-reference": "^0.9.40",
+    "dotenv": "^17.2.4",
+    "drizzle-orm": "^0.45.1",
+    "hono": "^4.11.8",
+    "openapi-zod-client": "^1.18.3",
+    "zod": "^4.3.6"
+  }
+}
